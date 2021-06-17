@@ -1,0 +1,231 @@
+/* CSS reset  */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variables */
+:root{
+    --navbar-height:50px;
+}
+/* Navigation Bar  */
+#navbar{
+    display: flex;
+    position: sticky;
+    top: 0px;
+}
+
+/* Navigation Bar:Logo & img  */
+#logo{
+margin: -8px 20px;
+}
+#logo img{
+    margin: 18px 20px;
+    height: 85px
+}
+
+/* Navigation Bar:List styling  */
+/* #navbar{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position:relative;
+    
+} */
+/* #navbar{
+    position:relative;
+} */
+#navbar::before{
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    z-index: -1;
+}
+/* he gave the black bg through this much but i used just navbar */
+/* to give bg black he used this before pseudo selector instead my method of giving just black bg because in that decreasing opacity affects the whole contetn(including taxt) not like this method  */
+#navbar ul{
+    display: flex;
+    list-style: none;
+}
+#navbar ul li a{
+    color: white;
+    margin: 0px;
+    padding: 12px 15px;
+    font-size: 1.3rem;
+    text-decoration:none;
+    font-family: 'Langar', cursive;
+}
+
+#navbar ul li a{
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    
+}
+#navbar ul li a:hover{
+    background-color: orchid;
+    color:black;
+    border-radius: 20px;
+}
+
+/* Home Section  */
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    height: 458px;
+}
+
+#home::before{
+    content: "";
+    background: url("bgimg.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 84%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1.89;
+    z-index: -2;
+}
+
+
+p{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Services Section  */
+#services{
+    margin: 30px 40px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid red;
+    padding: 20px;
+    margin: 10px 10px;
+    border-radius: 23px;
+    background-color: #fdd1ff
+}
+#services .box img{
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+#services .box p{
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+}
+#services{}
+
+/* Client Section */
+#client-section{
+/* height: 460px; */
+}
+#clients{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#clients img{
+    height: 220px;
+width: 345px;
+}
+.client-item{
+    padding: 5px 10px;
+    margin: 0px 20px;
+    border: 2px solid black;
+    border-radius: 23px;
+}
+#client-section::before{
+    content: "";
+    background: url("bg2img.jpg") no-repeat center center/cover;
+width: 101%;
+height: 123%;
+position: absolute;
+z-index: -2;
+opacity: 0.5;
+}
+/* Contact section  */
+#contact{
+position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url("contact.jpg") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#contact-box form{
+    width: 20%;
+height: 20%;
+}
+#contact-box form label{
+    font-size: 1.8rem;
+    font-family: 'Hanalei Fill', cursive;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-size: 1.3rem;
+}
+
+footer{
+background-color: cornflowerblue;
+color: black;
+padding: 5px 20px;
+text-align: center;
+}
+
+/* utility classes */
+/* classes in which u give css one time and put this class everywhere u want the same css */
+.h-primary{
+    font-size: 3.5rem;
+    padding: 58px;
+    color:black;
+    text-align: center;
+    /* font-family: 'Langar', cursive; */
+    font-family: 'Ubuntu', sans-serif;
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 15px;
+    color:#004eff;
+    text-align: center;
+    /* font-family: 'Langar', cursive; */
+    font-family: 'Ubuntu', sans-serif;
+}
+.btn{
+    border:2px solid rgb(236, 13, 236);
+    background-color: whitesmoke;
+    color: black;
+    padding: 5px 20px;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
